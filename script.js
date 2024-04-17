@@ -14,6 +14,7 @@ createApp({
         axios.get(this.apiUrl)
         .then((result) => {
           this.diskList = result.data;
+          console.log(this.diskList);
         });
       }
     },

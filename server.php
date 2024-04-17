@@ -16,4 +16,4 @@ header('Content-Type: application/json');
 
 echo json_encode($disk_list);
 
-var_dump($json_string);
+// var_dump($json_string);
