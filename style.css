@@ -1,14 +1,14 @@
 body{
-  background-color: #0b1117;
+  background-color: #0b1218;
 }
 
 main{
-  background-color: #ffffff;
+  background-color: #1d2d3c;
   
 }
 
 header{
-  background-color: #203042;
+  background-color: #111f2b;
 }
 
 .logo{
@@ -18,21 +18,21 @@ header{
 }
 
 .sa_card{
-  background-color: #61616179;
+  background-color: #112030;
   box-shadow: 0px 2px 15px 2px;
 
   
 }
 
-.poster{
-    width: 200px;
-    height: 200px;
-    transform: scale(0.3);
-    /* width: 350px;  */
+.sa_card img{
+    width: 280px;
+    height: 280px;
+    aspect-ratio: 1/1;
+    transform: scale(0.8);
     box-shadow: 0px 2px 15px 2px;
     margin: 0 auto;
   }
   .sa_card img:hover{
-    transform: scale(0.5);
+    transform: scale(0.9);
     transition: .5s ease;
   }
