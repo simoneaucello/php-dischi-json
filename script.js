@@ -4,12 +4,22 @@ createApp({
 
     data(){
       return{
-        apiUrl: 'server.php'
+        apiUrl: 'server.php',
+        diskList: []
       }
     },
 
     methods:{
-      
+      getApi(){
+        axios.get(this.apiUrl)
+        .then((result) => {
+          this.diskList = result.data;
+        });
+      }
+    },
+
+    mounted(){
+      this.getApi();
     }
 
 }).mount('#app')

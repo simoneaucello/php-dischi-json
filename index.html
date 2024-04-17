@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- vue  -->
-<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/3.4.23/vue.global.js' integrity='sha512-nG1pzAdB6onYkrCldpnkwHzZw7H3IUL4RLhinI7XEioaM8PHQDeHD6zPf+tog9WlKLAojc4zddvkTUpHvAZbew==' crossorigin='anonymous'></script>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
 <!-- bootstrap  -->
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css' integrity='sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==' crossorigin='anonymous'/>
@@ -27,15 +27,15 @@
       <img src="img/logo-spotify.png" alt="logo" class="logo">
     </header>
 
-    <main class="container my-5 d-flex justify-content-between">
+    <main class="container  d-flex justify-content-between flex-wrap">
 
-      <div class="col mb-3">
+     <div class="col mb-3" v-for="item in diskList" :key="item.id">
         <div class="card sa_card">
-          <img src="https://m.media-amazon.com/images/I/81UtLzBDoEL._SS500_.jpg" class="card-img-top" alt="cover">
+          <img :src="item.poster" class="card-img-top" :alt="item.title">
           <div class="card-body text-center">
-            <h5 class="card-title text-white">title</h5>
-            <h6 class="card-title text">artist</h6>
-            <p class="text-warning">anno</p>
+            <h5 class="card-title text-white">{{item.title}}</h5>
+            <h6 class="card-title text">{{item.author}}</h6>
+            <p class="text-warning">{{item.year}}</p>
           </div>
         </div>
        </div>
@@ -43,6 +43,7 @@
     </main>
 
   </div>
-  
+
+  <script src="./script.js"></script>
 </body>
 </html>
