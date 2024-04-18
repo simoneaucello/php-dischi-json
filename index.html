@@ -22,24 +22,50 @@
 </head>
 <body>
 
-  <div id="app" class="sa_container">
-    <header class="container">
+  <div id="app" class="">
+    <header class="container d-flex justify-content-between align-items-center ">
       <img src="img/logo-spotify.png" alt="logo" class="logo">
+      <a href="javascript: document.body.scrollIntoView(false);" class="btn btn-dark text-warning me-5">AGGIUNGI UN NUOVO BRANO</a>
     </header>
 
-    <main class="container mt-3 d-flex justify-content-between flex-wrap">
+    <main class="container sa_container mt-3 d-flex justify-content-between flex-wrap">
 
-     <div class="col  p-1 m-3" v-for="item in diskList" :key="item.id">
+     <div class="col d-flex flex-wrap justify-content-center  p-1 m-3" v-for="item in diskList" :key="item.id">
         <div class="card sa_card ">
           <img :src="item.poster" class="card-img-top poster" :alt="item.title">
           <div class="card-body text-center">
             <h5 class="card-title text-white">{{item.title}}</h5>
             <h6 class="card-title text-warning">{{item.author}}</h6>
             <p class="text-white">{{item.year}}</p>
-            <button class="btn btn-dark ">More</button>
+            <button class="btn btn-dark text-warning">More</button>
           </div>
         </div>
        </div>
+
+       <div class="container-fluid d-flex flex-column justify-content-center ">
+      
+        <h2 class="text-warning mt-3 text-center">Aggiungi un nuovo brano</h2>
+  
+      <input
+        type="text"
+        class="form-control mt-3 "
+        placeholder="Aggiungi Titolo">
+      <input
+        type="text"
+        class="form-control mt-3 "
+        placeholder="Aggiungi Artista">
+      <input
+        type="text"
+        class="form-control mt-3 "
+        placeholder="Aggiungi Anno di uscita">
+      <input
+        type="text"
+        class="form-control mt-3 "
+        placeholder="Aggiungi Url Copertina">
+
+      <button class="btn btn-dark mt-3 mb-5 text-warning" >CARICA</button>
+    
+    </div>
      
     </main>
 

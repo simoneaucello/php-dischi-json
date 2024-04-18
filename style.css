@@ -4,11 +4,17 @@ body{
 
 main{
   background-color: #1d2d3c;
+
   
 }
 
 header{
   background-color: #111f2b;
+}
+
+.sa_container{
+  border-radius: 20px;
+
 }
 
 .logo{
@@ -19,17 +25,17 @@ header{
 
 .sa_card{
   background-color: #112030;
-  box-shadow: 0px 2px 15px 2px;
+  box-shadow: 0px 2px 15px 2px ;
 
   
 }
 
 .sa_card img{
-    width: 300px;
-    height: 300px;
+    /* width: 300px;
+    height: 300px; */
     aspect-ratio: 1/1;
     transform: scale(0.8);
-    box-shadow: 0px 2px 15px 2px;
+    box-shadow: 0px 2px 15px 2px ;
     margin: 0 auto;
   }
   .sa_card img:hover{
