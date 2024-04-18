@@ -26,8 +26,8 @@ header{
 .sa_card{
   background-color: #112030;
   box-shadow: 0px 2px 15px 2px ;
+  position: relative;
 
-  
 }
 
 .sa_card img{
@@ -42,4 +42,14 @@ header{
   .sa_card img:hover{
     transform: scale(0.9);
     transition: .5s ease;
+  }
+
+  .info-card{
+    border-radius: 10px;
+    position: absolute;
+    background-color: rgba(0,0,0,0.7);
+    width: 100%;
+    height: 20%;
+    top: 0;
+    left: 0;
   }

@@ -6,6 +6,7 @@ createApp({
       return{
         apiUrl: 'server.php',
         diskList: [],
+        selectedSong: "",
         newSong:{
           title: "",
           author: "",

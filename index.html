@@ -40,11 +40,22 @@
             <h5 class="card-title text-white">{{item.title}}</h5>
             <h6 class="card-title text-warning">{{item.author}}</h6>
             <p class="text-white">{{item.year}}</p>
-            <button class="btn btn-outline-success   text-warning me-3"><i class="fa-solid fa-circle-info"></i></button>
+
+           <button
+              @click="(selectedSong === '' || selectedSong != item) ? selectedSong = item : selectedSong = ''"
+              class="btn btn-outline-success   text-warning me-3"><i
+              class="fa-solid fa-circle-info"></i></button>
             <button
               @click.stop="removeSong(index)"
               class="btn btn-outline-danger  text-warning"><i
               class="fa-solid fa-trash-can"></i></button>
+
+              <div
+              v-if="selectedSong === item"
+                class="info-card">
+                <p class="card-text text-warning mt-3 fs-1" >Genere: {{item.genre}}</p>
+
+              </div>
             
           </div>
         </div>
