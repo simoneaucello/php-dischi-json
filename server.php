@@ -22,7 +22,7 @@ if (isset($_POST['newSongTitle'])) {
 }
 
 // se mi arriva in POST songToDelete elimino il post all'indice e aggiorno i dati
-if (isset($_POST['songToDelete'])) {
+if (isset($_POST['indexToDelete'])) {
   $indexToDelete = $_POST['indexToDelete'];
   array_splice($disk_list, $indexToDelete, 1);
   file_put_contents('dischi.json', json_encode($disk_list));
@@ -31,5 +31,3 @@ if (isset($_POST['songToDelete'])) {
 header('Content-Type: application/json');
 
 echo json_encode($disk_list);
-
-// var_dump($json_string);
