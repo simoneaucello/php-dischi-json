@@ -28,6 +28,13 @@ if (isset($_POST['indexToDelete'])) {
   file_put_contents('dischi.json', json_encode($disk_list));
 }
 
+// se mi arriva in POST indexToToggle e faccio il toggle del like e aggiorno i dati
+if (isset($_POST['indexToToggle'])) {
+  $indexToToggle = $_POST['indexToToggle'];
+  $disk_list[$indexToToggle]['like'] = !$disk_list[$indexToToggle]['like'];
+  file_put_contents('dischi.json', json_encode($disk_list));
+}
+
 header('Content-Type: application/json');
 
 echo json_encode($disk_list);

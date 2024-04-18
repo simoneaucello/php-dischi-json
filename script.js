@@ -7,6 +7,7 @@ createApp({
         apiUrl: 'server.php',
         diskList: [],
         selectedSong: "",
+        liked: false,
         newSong:{
           title: "",
           author: "",
@@ -61,8 +62,17 @@ createApp({
         .then(result => {
           this.diskList = result.data;
         })
+      },
 
+      toggleLike(){
+        // this.liked = !this.liked;
+        const data = new FormData();
+        data.append('indexToToggle', index);
 
+        axios.post(this.apiUrl, data)
+        .then(result => {
+        this.diskList = result.data
+      })
       }
     },
 
