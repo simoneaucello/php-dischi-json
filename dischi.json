@@ -1,6 +1,5 @@
 [
     {
-        "id": 1,
         "title": "New Jersey",
         "author": "Bon Jovi",
         "year": 1988,
@@ -8,7 +7,6 @@
         "genre": "Rock"
     },
     {
-        "id": 2,
         "title": "Live at Wembley 86",
         "author": "Queen",
         "year": 1992,
@@ -16,7 +14,6 @@
         "genre": "Pop"
     },
     {
-        "id": 3,
         "title": "Ten\"s Summoner\"s Tales",
         "author": "Sting",
         "year": 1993,
@@ -24,7 +21,6 @@
         "genre": "Pop"
     },
     {
-        "id": 4,
         "title": "Steve Gadd band",
         "author": "Steve Gadd Band",
         "year": 2018,
@@ -32,7 +28,6 @@
         "genre": "Jazz"
     },
     {
-        "id": 5,
         "title": "Brave new World",
         "author": "Iron Maiden",
         "year": 2000,
@@ -40,7 +35,6 @@
         "genre": "Metal"
     },
     {
-        "id": 6,
         "title": "One more car, one more rider",
         "author": "Eric Clapton",
         "year": 2002,

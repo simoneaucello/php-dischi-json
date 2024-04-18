@@ -30,14 +30,22 @@
 
     <main class="container sa_container mt-3 d-flex justify-content-between flex-wrap">
 
-     <div class="col d-flex flex-wrap justify-content-center  p-1 m-3" v-for="item in diskList" :key="item.id">
-        <div class="card sa_card ">
+        <div
+          class="col d-flex flex-wrap justify-content-center  p-1 m-3"
+          v-for="(item,index) in diskList"
+          :key="index">
+        <div class="card sa_card">
           <img :src="item.poster" class="card-img-top poster" :alt="item.title">
           <div class="card-body text-center">
             <h5 class="card-title text-white">{{item.title}}</h5>
             <h6 class="card-title text-warning">{{item.author}}</h6>
             <p class="text-white">{{item.year}}</p>
-            <button class="btn btn-dark text-warning">More</button>
+            <button class="btn btn-outline-success   text-warning me-3"><i class="fa-solid fa-circle-info"></i></button>
+            <button
+              @click.stop="removeSong(index)"
+              class="btn btn-outline-danger  text-warning"><i
+              class="fa-solid fa-trash-can"></i></button>
+            
           </div>
         </div>
        </div>
@@ -47,23 +55,35 @@
         <h2 class="text-warning mt-3 text-center">Aggiungi un nuovo brano</h2>
   
       <input
+        v-model.trim="newSong.title"
         type="text"
         class="form-control mt-3 "
         placeholder="Aggiungi Titolo">
       <input
+        v-model.trim="newSong.author"
         type="text"
         class="form-control mt-3 "
         placeholder="Aggiungi Artista">
       <input
+        v-model.trim="newSong.year"
         type="text"
         class="form-control mt-3 "
         placeholder="Aggiungi Anno di uscita">
       <input
+        v-model.trim="newSong.poster"
         type="text"
         class="form-control mt-3 "
         placeholder="Aggiungi Url Copertina">
+      <input
+        v-model.trim="newSong.genre"
+        type="text"
+        class="form-control mt-3 "
+        placeholder="Aggiungi Genere">
 
-      <button class="btn btn-dark mt-3 mb-5 text-warning" >CARICA</button>
+      <button
+        @click.stop="addNewSong()"
+        class="btn btn-dark mt-3 mb-5 text-warning"
+        >CARICA</button>
     
     </div>
      
